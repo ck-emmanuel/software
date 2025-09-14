@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
         /* Enhanced Base styles */
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -26,13 +26,13 @@
             --border-radius: 16px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background: var(--background);
@@ -63,10 +63,17 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
         }
-        
+
         main {
             max-width: 1400px;
             margin: 0 auto;
@@ -76,7 +83,7 @@
             gap: 40px;
             min-height: 100vh;
         }
-        
+
         /* Enhanced Sidebar with glassmorphism */
         .sidebar {
             background: var(--glass-bg);
@@ -99,15 +106,22 @@
         }
 
         @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
-        
+
         .sidebar-info {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .avatar-box {
             width: 150px;
             height: 150px;
@@ -128,10 +142,15 @@
         }
 
         @keyframes pulse {
-            from { box-shadow: 0 0 20px rgba(79, 172, 254, 0.3); }
-            to { box-shadow: 0 0 40px rgba(0, 242, 254, 0.6); }
+            from {
+                box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+            }
+
+            to {
+                box-shadow: 0 0 40px rgba(0, 242, 254, 0.6);
+            }
         }
-        
+
         .avatar-box i {
             font-size: 70px;
             color: white;
@@ -145,15 +164,20 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: conic-gradient(transparent, rgba(255,255,255,0.3), transparent);
+            background: conic-gradient(transparent, rgba(255, 255, 255, 0.3), transparent);
             animation: rotate 4s linear infinite;
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
-        
+
         .name {
             font-size: 28px;
             font-weight: 700;
@@ -163,7 +187,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .title {
             color: rgba(255, 255, 255, 0.9);
             font-weight: 500;
@@ -182,12 +206,12 @@
             background: var(--accent-gradient);
             border-radius: 2px;
         }
-        
+
         .contacts-list {
             list-style: none;
             margin-top: 20px;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
@@ -203,7 +227,7 @@
             background: rgba(255, 255, 255, 0.2);
             transform: translateX(10px);
         }
-        
+
         .icon-box {
             margin-right: 20px;
             width: 40px;
@@ -215,18 +239,18 @@
             border-radius: 10px;
             font-size: 16px;
         }
-        
+
         .contact-link {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
         }
-        
+
         .contact-link:hover {
             color: #4facfe;
         }
-        
+
         .social-list {
             display: flex;
             justify-content: center;
@@ -234,7 +258,7 @@
             margin-top: 30px;
             gap: 20px;
         }
-        
+
         .social-link {
             color: white;
             font-size: 24px;
@@ -254,7 +278,7 @@
             transform: translateY(-5px) scale(1.1);
             border-color: rgba(255, 255, 255, 0.3);
         }
-        
+
         /* Enhanced Main content with glassmorphism */
         .main-content {
             background: rgba(255, 255, 255, 0.95);
@@ -279,14 +303,21 @@
         }
 
         @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
-        
+
         .navbar {
             margin-bottom: 40px;
         }
-        
+
         .navbar-list {
             display: flex;
             list-style: none;
@@ -296,7 +327,7 @@
             border-radius: 50px;
             backdrop-filter: blur(10px);
         }
-        
+
         .navbar-link {
             background: transparent;
             border: none;
@@ -311,7 +342,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .navbar-link.active {
             background: var(--primary-gradient);
             color: white;
@@ -323,7 +354,7 @@
             background: rgba(103, 126, 234, 0.1);
             transform: translateY(-2px);
         }
-        
+
         .article-title {
             font-size: 36px;
             font-weight: 700;
@@ -346,7 +377,7 @@
             background: var(--primary-gradient);
             border-radius: 2px;
         }
-        
+
         .about-text {
             margin-bottom: 40px;
             font-size: 16px;
@@ -365,19 +396,26 @@
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .service-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             list-style: none;
         }
-        
+
         .service-item {
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
             padding: 30px;
             border-radius: var(--border-radius);
             display: flex;
@@ -408,9 +446,9 @@
         .service-item:hover {
             transform: translateY(-10px);
             box-shadow: var(--card-hover-shadow);
-            background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%);
         }
-        
+
         .service-icon-box {
             margin-right: 20px;
             width: 60px;
@@ -441,17 +479,17 @@
             color: var(--text-light);
             line-height: 1.6;
         }
-        
+
         .timeline {
             margin-bottom: 50px;
         }
-        
+
         .title-wrapper {
             display: flex;
             align-items: center;
             margin-bottom: 30px;
         }
-        
+
         .title-wrapper .icon-box {
             background: var(--primary-gradient);
             color: white;
@@ -470,13 +508,13 @@
             font-weight: 600;
             color: var(--text-primary);
         }
-        
+
         .timeline-list {
             list-style: none;
             position: relative;
             padding-left: 40px;
         }
-        
+
         .timeline-list::before {
             content: '';
             position: absolute;
@@ -487,7 +525,7 @@
             background: var(--primary-gradient);
             border-radius: 2px;
         }
-        
+
         .timeline-item {
             position: relative;
             margin-bottom: 35px;
@@ -503,7 +541,7 @@
             transform: translateX(10px);
             box-shadow: var(--card-hover-shadow);
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -515,7 +553,7 @@
             background: var(--primary-gradient);
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
         }
-        
+
         .timeline-item-title {
             font-size: 20px;
             font-weight: 600;
@@ -534,11 +572,11 @@
             color: var(--text-secondary);
             line-height: 1.7;
         }
-        
+
         .skills-list {
             list-style: none;
         }
-        
+
         .skills-item {
             margin-bottom: 25px;
             background: rgba(255, 255, 255, 0.8);
@@ -547,7 +585,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .skills-item .title-wrapper {
             display: flex;
             justify-content: space-between;
@@ -563,14 +601,14 @@
             font-weight: 600;
             color: var(--text-light);
         }
-        
+
         .skills-progress-bg {
             height: 10px;
             background: rgba(103, 126, 234, 0.1);
             border-radius: 5px;
             overflow: hidden;
         }
-        
+
         .skills-progress-fill {
             height: 100%;
             background: var(--primary-gradient);
@@ -586,22 +624,27 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             animation: shimmer 2s infinite;
         }
 
         @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
         }
-        
+
         .project-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
             list-style: none;
         }
-        
+
         .project-item {
             background: rgba(255, 255, 255, 0.9);
             border-radius: var(--border-radius);
@@ -628,12 +671,12 @@
         .project-item:hover::before {
             opacity: 0.1;
         }
-        
+
         .project-item:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: var(--card-hover-shadow);
         }
-        
+
         .project-img {
             height: 220px;
             background: var(--primary-gradient);
@@ -643,7 +686,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .project-img i {
             font-size: 60px;
             color: white;
@@ -653,7 +696,7 @@
         .project-item:hover .project-img i {
             transform: scale(1.2) rotate(10deg);
         }
-        
+
         .project-item-icon-box {
             position: absolute;
             top: 15px;
@@ -670,20 +713,20 @@
             opacity: 1;
             transform: scale(1.1);
         }
-        
+
         .project-content {
             padding: 25px;
             position: relative;
             z-index: 2;
         }
-        
+
         .project-title {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 8px;
             color: var(--text-primary);
         }
-        
+
         .project-category {
             color: var(--text-light);
             font-size: 14px;
@@ -694,11 +737,11 @@
             text-decoration: none;
             color: inherit;
         }
-        
+
         .mapbox {
             margin-bottom: 40px;
         }
-        
+
         .mapbox iframe {
             width: 100%;
             height: 350px;
@@ -706,29 +749,29 @@
             border-radius: var(--border-radius);
             box-shadow: var(--card-shadow);
         }
-        
+
         .contact-form {
             margin-bottom: 40px;
         }
-        
+
         .form-title {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 20px;
             color: var(--text-primary);
         }
-        
+
         .form {
             display: grid;
             gap: 20px;
         }
-        
+
         .input-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        
+
         .form-input {
             padding: 18px 20px;
             border: 2px solid rgba(103, 126, 234, 0.1);
@@ -745,12 +788,12 @@
             box-shadow: 0 0 0 3px rgba(103, 126, 234, 0.1);
             background: white;
         }
-        
+
         textarea.form-input {
             min-height: 140px;
             resize: vertical;
         }
-        
+
         .form-btn {
             background: var(--primary-gradient);
             color: white;
@@ -772,15 +815,15 @@
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(103, 126, 234, 0.4);
         }
-        
+
         .form-btn i {
             margin-right: 10px;
         }
-        
+
         .referees {
             margin-top: 40px;
         }
-        
+
         .referee-item {
             background: rgba(255, 255, 255, 0.8);
             padding: 25px;
@@ -795,14 +838,14 @@
             transform: translateX(10px);
             box-shadow: var(--card-hover-shadow);
         }
-        
+
         .referee-name {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 8px;
             color: var(--text-primary);
         }
-        
+
         .referee-title {
             font-weight: 500;
             margin-bottom: 8px;
@@ -814,7 +857,7 @@
             font-size: 14px;
             margin-bottom: 4px;
         }
-        
+
         /* Enhanced Responsive styles */
         @media (max-width: 1200px) {
             main {
@@ -828,17 +871,17 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
+
             .sidebar {
                 position: static;
                 margin-bottom: 30px;
             }
-            
+
             .input-wrapper {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         @media (max-width: 768px) {
             main {
                 padding: 20px 10px;
@@ -847,15 +890,15 @@
             .main-content {
                 padding: 25px;
             }
-            
+
             .service-list {
                 grid-template-columns: 1fr;
             }
-            
+
             .project-list {
                 grid-template-columns: 1fr;
             }
-            
+
             .navbar-list {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -913,7 +956,8 @@
                         </div>
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
-                            <a href="mailto:emmanuel2kipngeno@gmail.com" class="contact-link">emmanuel2kipngeno@gmail.com</a>
+                            <a href="mailto:emmanuel2kipngeno@gmail.com"
+                                class="contact-link">emmanuel2kipngeno@gmail.com</a>
                         </div>
                     </li>
 
@@ -965,6 +1009,12 @@
                     <li class="navbar-item"><button class="navbar-link">Resume</button></li>
                     <li class="navbar-item"><button class="navbar-link">Portfolio</button></li>
                     <li class="navbar-item"><button class="navbar-link">Contact</button></li>
+                    <li class="navbar-item">
+                        <a id="cv-download-tab" href="Cheruiyot_Emmanuel_CV.pdf" download class="navbar-link"
+                            style="text-decoration: none;">
+                            Download CV
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
@@ -974,8 +1024,13 @@
                 </header>
 
                 <section class="about-text">
-                    <p>Software engineer with experience in full-stack development, data engineering processes and developer operations. I am committed to learning and delivering project success in diverse teams and projects.</p>
-                    <p>With expertise in software architecture, API development, and cloud infrastructure, I bring a comprehensive skill set to build scalable and efficient applications. My professional journey includes developing web applications, mobile solutions, and contributing to open-source projects.</p>
+                    <p>Software engineer with experience in full-stack development, data engineering processes and
+                        developer operations. I am committed to learning and delivering project success in diverse teams
+                        and projects.</p>
+                    <p>With expertise in software architecture, API development, and cloud infrastructure, I bring a
+                        comprehensive skill set to build scalable and efficient applications. My professional journey
+                        includes developing web applications, mobile solutions, and contributing to open-source
+                        projects.</p>
                 </section>
 
                 <section class="service">
@@ -989,7 +1044,8 @@
 
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Web Development</h4>
-                                <p class="service-item-text">Building responsive and scalable web applications using modern frameworks.</p>
+                                <p class="service-item-text">Building responsive and scalable web applications using
+                                    modern frameworks.</p>
                             </div>
                         </li>
 
@@ -1000,7 +1056,8 @@
 
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Mobile Development</h4>
-                                <p class="service-item-text">Developing cross-platform mobile applications with intuitive user interfaces.</p>
+                                <p class="service-item-text">Developing cross-platform mobile applications with
+                                    intuitive user interfaces.</p>
                             </div>
                         </li>
 
@@ -1011,7 +1068,8 @@
 
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Backend Development</h4>
-                                <p class="service-item-text">Creating robust APIs and server-side logic with efficient database management.</p>
+                                <p class="service-item-text">Creating robust APIs and server-side logic with efficient
+                                    database management.</p>
                             </div>
                         </li>
 
@@ -1022,7 +1080,8 @@
 
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Cloud & DevOps</h4>
-                                <p class="service-item-text">Implementing CI/CD pipelines and cloud infrastructure for scalable deployments.</p>
+                                <p class="service-item-text">Implementing CI/CD pipelines and cloud infrastructure for
+                                    scalable deployments.</p>
                             </div>
                         </li>
                     </ul>
@@ -1045,7 +1104,8 @@
                             <h4 class="h4 timeline-item-title">Software Developer - Genius Lab Consortium (GLC)</h4>
                             <span>December 2023 – June 2024</span>
                             <p class="timeline-text">
-                                - Developed and maintained web applications to enhance user experience and engagement<br>
+                                - Developed and maintained web applications to enhance user experience and
+                                engagement<br>
                                 - Collaborated with cross-functional teams to design and implement new features<br>
                                 - Refactored existing codebases for better performance and scalability<br>
                                 - Participated in code reviews and provided constructive feedback to peers
@@ -1056,7 +1116,8 @@
                             <h4 class="h4 timeline-item-title">Data Engineer - Datastacks Technologies</h4>
                             <span>December 2022 – August 2023</span>
                             <p class="timeline-text">
-                                - Co-Founded a data consultancy focused on building automated data processing pipelines<br>
+                                - Co-Founded a data consultancy focused on building automated data processing
+                                pipelines<br>
                                 - Developed Machine Learning models and applications for client solutions<br>
                                 - Built dashboards for data visualization and business intelligence
                             </p>
@@ -1066,7 +1127,8 @@
                             <h4 class="h4 timeline-item-title">IT Support Intern - Micro-Business Solutions Ltd.</h4>
                             <span>August 2020 – September 2021</span>
                             <p class="timeline-text">
-                                - Developed a mobile application for sales management and monitoring multiple businesses<br>
+                                - Developed a mobile application for sales management and monitoring multiple
+                                businesses<br>
                                 - Implemented statistical analysis capabilities with quick checkout and transactions<br>
                                 - Integrated cloud storage for business data and real-time updates
                             </p>
@@ -1224,7 +1286,8 @@
                                 </figure>
                                 <div class="project-content">
                                     <h3 class="project-title">Micro Business Assistant</h3>
-                                    <p class="project-category">React Native mobile application with inventory management</p>
+                                    <p class="project-category">React Native mobile application with inventory
+                                        management</p>
                                 </div>
                             </a>
                         </li>
@@ -1238,7 +1301,8 @@
                                 </figure>
                                 <div class="project-content">
                                     <h3 class="project-title">E-commerce Platform</h3>
-                                    <p class="project-category">MERN stack e-commerce solution with payment integration</p>
+                                    <p class="project-category">MERN stack e-commerce solution with payment integration
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -1295,21 +1359,23 @@
 
     <script>
         // Enhanced JavaScript with animations and interactivity
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Tab navigation
             const navLinks = document.querySelectorAll('.navbar-link');
             const articles = document.querySelectorAll('.main-content > article');
-            
+
             navLinks.forEach((link, index) => {
+                // Skip the Download CV tab (last one)
+                if (link.id === 'cv-download-tab') return;
                 link.addEventListener('click', () => {
                     // Remove active class from all links and hide articles
                     navLinks.forEach(l => l.classList.remove('active'));
                     articles.forEach(a => a.style.display = 'none');
-                    
+
                     // Add active class to clicked link and show corresponding article
                     link.classList.add('active');
                     articles[index].style.display = 'block';
-                    
+
                     // Trigger animations for the active section
                     setTimeout(() => {
                         animateSection(articles[index]);
@@ -1321,7 +1387,7 @@
             function createParticles() {
                 const particlesContainer = document.querySelector('.particles');
                 const particleCount = 50;
-                
+
                 for (let i = 0; i < particleCount; i++) {
                     const particle = document.createElement('div');
                     particle.classList.add('particle');
@@ -1381,14 +1447,14 @@
             // Form submission with animation
             const form = document.querySelector('.form');
             if (form) {
-                form.addEventListener('submit', function(e) {
+                form.addEventListener('submit', function (e) {
                     e.preventDefault();
                     const btn = form.querySelector('.form-btn');
                     const originalText = btn.innerHTML;
-                    
+
                     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                     btn.disabled = true;
-                    
+
                     setTimeout(() => {
                         btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
                         btn.style.background = '#48bb78';
@@ -1405,7 +1471,7 @@
             // Initialize
             createParticles();
             animateSection(document.querySelector('.about'));
-            
+
             // Listen for resume tab click to animate skill bars
             navLinks[1].addEventListener('click', () => {
                 setTimeout(animateSkillBars, 300);
